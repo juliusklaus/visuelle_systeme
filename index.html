@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>klassenfoto</title>
+    <link href="http://fast.fonts.com/cssapi/e795c72e-089a-4071-9caa-fd53c0e84a11.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+    * { 
+    font-family:'News Gothic W01', Arial;
+    font-size: 19px;
+    line-height: 27px;
+    color: #fff; 
+    background-color: darkgray;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px #fff solid; 
+}
+
+#thema, #bild {
+    position: relative;
+    width: 100%;
+}
+
+#thema {
+    padding-bottom: 40px;
+    list-style-type:decimal
+}
+
+.selected {
+    border-bottom: 1px #fff solid; 
+}
+
+#bild {
+    max-width: 1090px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#einkommen, #kleidung, #miete, #investition, #essen {
+    display: none;
+} 
+
+#bild>div {
+    position: absolute;
+}
+
+#bild>div>img {
+    padding: 2px 2px 2px 2px;
+    width: 120px;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+@media only screen and (min-width: 1340px) /* and (max-width: 965px)*/ {
+    #bild>div>img {
+        padding: 2px 2px 2px 2px;
+        width: 150px;
+    }
+    
+    #bild {
+        max-width: 1350px;
+    }
+}
+
+@media only screen and (min-width: 1760px) /* and (max-width: 965px)*/ {
+    #bild>div>img {
+        padding: 2px 2px 2px 2px;
+        width: 197px;
+    }
+    
+    #bild {
+        max-width: 1810px;
+    }
+}
+    </style>
+    <script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+    $('#start-button').click(function(){
+        $('#start').fadeIn('slow');
+    	$('#einkommen').fadeOut('slow');
+        $('#kleidung').fadeOut('slow');
+        $('#miete').fadeOut('slow');
+        $('#investition').fadeOut('slow');
+        $('#essen').fadeOut('slow');
+        $('#start-button').addClass('selected');
+        $('#einkommen-button').removeClass('selected');
+        $('#kleidung-button').removeClass('selected');
+        $('#miete-button').removeClass('selected');
+        $('#investition-button').removeClass('selected');
+        $('#essen-button').removeClass('selected');
+    })
+    $('#einkommen-button').click(function(){
+        $('#start').fadeOut('slow');
+    	$('#einkommen').fadeIn('slow');
+        $('#kleidung').fadeOut('slow');
+        $('#miete').fadeOut('slow');
+        $('#investition').fadeOut('slow');
+        $('#essen').fadeOut('slow');
+        $('#start-button').removeClass('selected');
+        $('#einkommen-button').addClass('selected');
+        $('#kleidung-button').removeClass('selected');
+        $('#miete-button').removeClass('selected');
+        $('#investition-button').removeClass('selected');
+        $('#essen-button').removeClass('selected');
+    })
+    $('#kleidung-button').click(function(){
+        $('#start').fadeOut('slow');
+    	$('#einkommen').fadeOut('slow');
+        $('#kleidung').fadeIn('slow');
+        $('#miete').fadeOut('slow');
+        $('#investition').fadeOut('slow');
+        $('#essen').fadeOut('slow');
+        $('#start-button').removeClass('selected');
+        $('#einkommen-button').removeClass('selected');
+        $('#kleidung-button').addClass('selected');
+        $('#miete-button').removeClass('selected');
+        $('#investition-button').removeClass('selected');
+        $('#essen-button').removeClass('selected');
+    })
+    $('#miete-button').click(function(){
+        $('#start').fadeOut('slow');
+    	$('#einkommen').fadeOut('slow');
+        $('#kleidung').fadeOut('slow');
+        $('#miete').fadeIn('slow');
+        $('#investition').fadeOut('slow');
+        $('#essen').fadeOut('slow');
+        $('#start-button').removeClass('selected');
+        $('#einkommen-button').removeClass('selected');
+        $('#kleidung-button').removeClass('selected');
+        $('#miete-button').addClass('selected');
+        $('#investition-button').removeClass('selected');
+        $('#essen-button').removeClass('selected');
+    })
+    $('#investition-button').click(function(){
+        $('#start').fadeOut('slow');
+    	$('#einkommen').fadeOut('slow');
+        $('#kleidung').fadeOut('slow');
+        $('#miete').fadeOut('slow');
+        $('#investition').fadeIn('slow');
+        $('#essen').fadeOut('slow');
+        $('#start-button').removeClass('selected');
+        $('#einkommen-button').removeClass('selected');
+        $('#kleidung-button').removeClass('selected');
+        $('#miete-button').removeClass('selected');
+        $('#investition-button').addClass('selected');
+        $('#essen-button').removeClass('selected');
+    })
+    $('#essen-button').click(function(){
+        $('#start').fadeOut('slow');
+    	$('#einkommen').fadeOut('slow');
+        $('#kleidung').fadeOut('slow');
+        $('#miete').fadeOut('slow');
+        $('#unvestition').fadeOut('slow');
+        $('#essen').fadeIn('slow');
+        $('#start-button').removeClass('selected');
+        $('#einkommen-button').removeClass('selected');
+        $('#kleidung-button').removeClass('selected');
+        $('#miete-button').removeClass('selected');
+        $('#investition-button').removeClass('selected');
+        $('#essen-button').addClass('selected');
+    })
+});
+    </script>
+</head>
+<body>
+    <div id="thema">
+        <a href="#" id="start-button" class="selected">Klasse Visuelle Systeme: Finanzielle Transparenz</a>
+        <br><br>
+        <li><a href="#" id="einkommen-button">Wie viel verdienst du monatlich?</a></li>
+        <li><a href="#" id="kleidung-button">Wie viel kostet dein teuerstes Kleidungsst&uuml;ck?</a></li>
+        <li><a href="#" id="miete-button">Wie viel Miete bezahlst du monatlich?</a></li>
+        <li><a href="#" id="investition-button">Wie viel hast du f&uuml;r deine bisher gr&ouml;&szlig;te Investition bezahlt?</a></li>
+        <li><a href="#" id="essen-button">Welchen Betrag hast du bisher maximal f&uuml;r Essen gehen ausgegeben?</a></li>
+    </div>     
+    <div id="bild">
+        <div id="start">
+            <img src="./img/trans_00_01.jpg">
+            <img src="./img/trans_00_02.jpg">
+            <img src="./img/trans_00_03.jpg">
+            <img src="./img/trans_00_04.jpg">
+            <img src="./img/trans_00_05.jpg">
+            <img src="./img/trans_00_06.jpg">
+            <img src="./img/trans_00_07.jpg">
+            <img src="./img/trans_00_08.jpg">
+            <img src="./img/trans_00_09.jpg">
+            <img src="./img/trans_00_10.jpg">
+            <img src="./img/trans_00_11.jpg">
+            <img src="./img/trans_00_12.jpg">
+            <img src="./img/trans_00_13.jpg">
+            <img src="./img/trans_00_14.jpg">
+            <img src="./img/trans_00_15.jpg">
+            <img src="./img/trans_00_16.jpg">
+        </div>
+        <div id="einkommen">
+            <img src="./img/trans_01_01.jpg">
+            <img src="./img/trans_01_02.jpg">
+            <img src="./img/trans_01_03.jpg">
+            <img src="./img/trans_01_04.jpg">
+            <img src="./img/trans_01_05.jpg">
+            <img src="./img/trans_01_06.jpg">
+            <img src="./img/trans_01_07.jpg">
+            <img src="./img/trans_01_08.jpg">
+            <img src="./img/trans_01_09.jpg">
+            <img src="./img/trans_01_10.jpg">
+            <img src="./img/trans_01_11.jpg">
+            <img src="./img/trans_01_12.jpg">
+            <img src="./img/trans_01_13.jpg">
+            <img src="./img/trans_01_14.jpg">
+            <img src="./img/trans_01_15.jpg">
+            <img src="./img/trans_01_16.jpg">
+        </div>
+        <div id="kleidung">
+            <img src="./img/trans_02_01.jpg">
+            <img src="./img/trans_02_02.jpg">
+            <img src="./img/trans_02_03.jpg">
+            <img src="./img/trans_02_04.jpg">
+            <img src="./img/trans_02_05.jpg">
+            <img src="./img/trans_02_06.jpg">
+            <img src="./img/trans_02_07.jpg">
+            <img src="./img/trans_02_08.jpg">
+            <img src="./img/trans_02_09.jpg">
+            <img src="./img/trans_02_10.jpg">
+            <img src="./img/trans_02_11.jpg">
+            <img src="./img/trans_02_12.jpg">
+            <img src="./img/trans_02_13.jpg">
+            <img src="./img/trans_02_14.jpg">
+            <img src="./img/trans_02_15.jpg">
+            <img src="./img/trans_02_16.jpg">
+        </div>
+        <div id="miete">
+            <img src="./img/trans_03_01.jpg">
+            <img src="./img/trans_03_02.jpg">
+            <img src="./img/trans_03_03.jpg">
+            <img src="./img/trans_03_04.jpg">
+            <img src="./img/trans_03_05.jpg">
+            <img src="./img/trans_03_06.jpg">
+            <img src="./img/trans_03_07.jpg">
+            <img src="./img/trans_03_08.jpg">
+            <img src="./img/trans_03_09.jpg">
+            <img src="./img/trans_03_10.jpg">
+            <img src="./img/trans_03_11.jpg">
+            <img src="./img/trans_03_12.jpg">
+            <img src="./img/trans_03_13.jpg">
+            <img src="./img/trans_03_14.jpg">
+            <img src="./img/trans_03_15.jpg">
+            <img src="./img/trans_03_16.jpg">
+        </div>
+        <div id="investition">
+            <img src="./img/trans_04_01.jpg">
+            <img src="./img/trans_04_02.jpg">
+            <img src="./img/trans_04_03.jpg">
+            <img src="./img/trans_04_04.jpg">
+            <img src="./img/trans_04_05.jpg">
+            <img src="./img/trans_04_06.jpg">
+            <img src="./img/trans_04_07.jpg">
+            <img src="./img/trans_04_08.jpg">
+            <img src="./img/trans_04_09.jpg">
+            <img src="./img/trans_04_10.jpg">
+            <img src="./img/trans_04_11.jpg">
+            <img src="./img/trans_04_12.jpg">
+            <img src="./img/trans_04_13.jpg">
+            <img src="./img/trans_04_14.jpg">
+            <img src="./img/trans_04_15.jpg">
+            <img src="./img/trans_04_16.jpg">
+        </div>
+        <div id="essen">
+            <img src="./img/trans_05_01.jpg">
+            <img src="./img/trans_05_02.jpg">
+            <img src="./img/trans_05_03.jpg">
+            <img src="./img/trans_05_04.jpg">
+            <img src="./img/trans_05_05.jpg">
+            <img src="./img/trans_05_06.jpg">
+            <img src="./img/trans_05_07.jpg">
+            <img src="./img/trans_05_08.jpg">
+            <img src="./img/trans_05_09.jpg">
+            <img src="./img/trans_05_10.jpg">
+            <img src="./img/trans_05_11.jpg">
+            <img src="./img/trans_05_12.jpg">
+            <img src="./img/trans_05_13.jpg">
+            <img src="./img/trans_05_14.jpg">
+            <img src="./img/trans_05_15.jpg">
+            <img src="./img/trans_05_16.jpg">
+        </div>
+    </div> 
+</body>    
+</html>
